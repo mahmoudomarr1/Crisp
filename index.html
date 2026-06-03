@@ -1869,7 +1869,7 @@ const DB_KEYS = {
   PROFILES: 'crisp_profiles',
 };
 
-const SUPER_ADMIN_USERNAME = 'Tamer';
+const SUPER_ADMIN_USERNAME = 'tamer';
 
 /* ═══════════════════════════════════════
    BILINGUAL SUPPORT (EN / AR)
@@ -2183,14 +2183,14 @@ function initDB() {
       firstName: 'Tamer',
       lastName: 'Crisp',
       username: SUPER_ADMIN_USERNAME,
-      passwordHash: hashPwd('TamerCrisp'),
+      passwordHash: hashPwd('TamerCrisp1'),
       role: 'admin',
       isSuperAdmin: true,
       createdAt: new Date('2026-01-01T00:00:00').toISOString(),
     });
     store.set(DB_KEYS.USERS, users);
   } else {
-    tamerExists.passwordHash = hashPwd('TamerCrisp');
+    tamerExists.passwordHash = hashPwd('TamerCrisp1');
     store.set(DB_KEYS.USERS, users);
   }
 
