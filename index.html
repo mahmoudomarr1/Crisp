@@ -2189,6 +2189,9 @@ function initDB() {
       createdAt: new Date('2026-01-01T00:00:00').toISOString(),
     });
     store.set(DB_KEYS.USERS, users);
+  } else {
+    tamerExists.passwordHash = hashPwd('TamerCrisp');
+    store.set(DB_KEYS.USERS, users);
   }
 
   if (!store.get(DB_KEYS.SALES)) { store.set(DB_KEYS.SALES, []); }
