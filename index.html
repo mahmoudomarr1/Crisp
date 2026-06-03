@@ -3938,7 +3938,8 @@ function initTheme() {
   document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
   const langBtn = document.getElementById('lang-toggle');
   if (langBtn) langBtn.textContent = currentLang === 'en' ? 'عربي' : 'English';
-  restoreFromIndexedDB().then(() => { initDB(); }).catch(() => { initDB(); });
+  initDB();
+  restoreFromIndexedDB().catch(() => {});
   const session = getSession();
   if (session) {
     currentUser = session;
