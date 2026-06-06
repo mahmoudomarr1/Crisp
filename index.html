@@ -1844,19 +1844,18 @@ function getTotalValue(p) { return Math.round((p.units?.bags?.stock||0)*(p.units
    SEED DATA — 13 freeze-dried products
 ═══════════════════════════════════════ */
 const INITIAL_PRODUCTS = [
-  { id:'p01', name:'Strawberry', arabic:'فراولة',   units:{ bags:{stock:96, price:2500, initialStock:96, damagedStock:0}, cans:{stock:5, price:1200, initialStock:5, damagedStock:0} } },
-  { id:'p02', name:'Mango',      arabic:'مانجو',     units:{ bags:{stock:84, price:2500, initialStock:84, damagedStock:0}, cans:{stock:3, price:1200, initialStock:3, damagedStock:0} } },
-  { id:'p03', name:'Banana',     arabic:'موز',       units:{ bags:{stock:72, price:2200, initialStock:72, damagedStock:0}, cans:{stock:4, price:1100, initialStock:4, damagedStock:0} } },
-  { id:'p04', name:'Apple',      arabic:'تفاح',      units:{ bags:{stock:60, price:2200, initialStock:60, damagedStock:0}, cans:{stock:2, price:1100, initialStock:2, damagedStock:0} } },
-  { id:'p05', name:'Orange',     arabic:'برتقال',    units:{ bags:{stock:90, price:2000, initialStock:90, damagedStock:0}, cans:{stock:6, price:1000, initialStock:6, damagedStock:0} } },
-  { id:'p06', name:'Peach',      arabic:'خوخ',       units:{ bags:{stock:50, price:2400, initialStock:50, damagedStock:0}, cans:{stock:2, price:1200, initialStock:2, damagedStock:0} } },
-  { id:'p07', name:'Pineapple',  arabic:'أناناس',    units:{ bags:{stock:40, price:2800, initialStock:40, damagedStock:0}, cans:{stock:4, price:1400, initialStock:4, damagedStock:0} } },
-  { id:'p08', name:'Mixed Berries', arabic:'توت مشكل', units:{ bags:{stock:55, price:3000, initialStock:55, damagedStock:0}, cans:{stock:3, price:1500, initialStock:3, damagedStock:0} } },
-  { id:'p09', name:'Kiwi',       arabic:'كيوي',      units:{ bags:{stock:35, price:2600, initialStock:35, damagedStock:0}, cans:{stock:2, price:1300, initialStock:2, damagedStock:0} } },
-  { id:'p10', name:'Watermelon', arabic:'بطيخ',      units:{ bags:{stock:30, price:2000, initialStock:30, damagedStock:0}, cans:{stock:2, price:1000, initialStock:2, damagedStock:0} } },
-  { id:'p11', name:'Grapes',     arabic:'عنب',       units:{ bags:{stock:65, price:2300, initialStock:65, damagedStock:0}, cans:{stock:4, price:1150, initialStock:4, damagedStock:0} } },
-  { id:'p12', name:'Cherry',     arabic:'كرز',       units:{ bags:{stock:45, price:3200, initialStock:45, damagedStock:0}, cans:{stock:3, price:1600, initialStock:3, damagedStock:0} } },
-  { id:'p13', name:'Coconut',    arabic:'جوز هند',   units:{ bags:{stock:38, price:2700, initialStock:38, damagedStock:0}, cans:{stock:2, price:1350, initialStock:2, damagedStock:0} } },
+  { id:'p01', name:'Berries',      arabic:'توت',       units:{ bags:{stock:94, price:2500, initialStock:94, damagedStock:0}, cans:{stock:0, price:0, initialStock:0, damagedStock:0} } },
+  { id:'p02', name:'Plums',        arabic:'برقوق',     units:{ bags:{stock:73, price:2500, initialStock:73, damagedStock:0}, cans:{stock:0, price:0, initialStock:0, damagedStock:0} } },
+  { id:'p03', name:'Grapes',       arabic:'عنب',       units:{ bags:{stock:45, price:2500, initialStock:45, damagedStock:0}, cans:{stock:0, price:0, initialStock:0, damagedStock:0} } },
+  { id:'p04', name:'Dragon Fruit', arabic:'فاكهة التنين', units:{ bags:{stock:38, price:2500, initialStock:38, damagedStock:0}, cans:{stock:0, price:0, initialStock:0, damagedStock:0} } },
+  { id:'p05', name:'Yellow Peaches', arabic:'خوخ أصفر', units:{ bags:{stock:36, price:2500, initialStock:36, damagedStock:0}, cans:{stock:0, price:0, initialStock:0, damagedStock:0} } },
+  { id:'p06', name:'Hand-Mixed Fruits', arabic:'فواكه مشكلة يدوية', units:{ bags:{stock:28, price:2500, initialStock:28, damagedStock:0}, cans:{stock:0, price:0, initialStock:0, damagedStock:0} } },
+  { id:'p07', name:'Kiwi',         arabic:'كيوي',      units:{ bags:{stock:24, price:2500, initialStock:24, damagedStock:0}, cans:{stock:0, price:0, initialStock:0, damagedStock:0} } },
+  { id:'p08', name:'Yogurt',       arabic:'زبادي',     units:{ bags:{stock:13, price:2500, initialStock:13, damagedStock:0}, cans:{stock:0, price:0, initialStock:0, damagedStock:0} } },
+  { id:'p09', name:'Apples',       arabic:'تفاح',      units:{ bags:{stock:12, price:2500, initialStock:12, damagedStock:0}, cans:{stock:0, price:0, initialStock:0, damagedStock:0} } },
+  { id:'p10', name:'Blueberries',  arabic:'توت أزرق',  units:{ bags:{stock:12, price:2500, initialStock:12, damagedStock:0}, cans:{stock:0, price:0, initialStock:0, damagedStock:0} } },
+  { id:'p11', name:'Mushrooms',    arabic:'فطر',       units:{ bags:{stock:12, price:2500, initialStock:12, damagedStock:0}, cans:{stock:0, price:0, initialStock:0, damagedStock:0} } },
+  { id:'p12', name:'Red Peaches',  arabic:'خوخ أحمر',  units:{ bags:{stock:10, price:2500, initialStock:10, damagedStock:0}, cans:{stock:0, price:0, initialStock:0, damagedStock:0} } },
 ];
 
 const DB_KEYS = {
