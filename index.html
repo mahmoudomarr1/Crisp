@@ -2141,37 +2141,8 @@ const store = {
    DATABASE INIT — seeds on first launch
 ═══════════════════════════════════════ */
 function initDB() {
-  // Products — migrate old flat schema to units if needed
-  const raw = store.get(DB_KEYS.PRODUCTS);
-  if (!raw) {
-    store.set(DB_KEYS.PRODUCTS, INITIAL_PRODUCTS);
-  } else {
-    let migrated = false;
-    const prods = raw.map(p => {
-      // Already new units schema
-      if (p.units && p.units.bags) return p;
-      // Migrate from flat { stock, price, initialStock, damagedStock }
-      migrated = true;
-      const bagStock   = p.stock||0;
-      const bagPrice   = p.price||2500;
-      const bagInit    = p.initialStock||bagStock;
-      const bagDamaged = p.damagedStock||0;
-      const canStock   = p.canStock||0;
-      const canPrice   = p.canPrice||(Math.round(bagPrice*0.5/100)*100);
-      const canInit    = p.canInitialStock||canStock;
-      const canDamaged = p.canDamagedStock||0;
-      return {
-        id: p.id,
-        name: p.name,
-        arabic: p.arabic||p.name,
-        units: {
-          bags: { stock: bagStock, price: bagPrice, initialStock: bagInit, damagedStock: bagDamaged },
-          cans: { stock: canStock, price: canPrice, initialStock: canInit, damagedStock: canDamaged },
-        },
-      };
-    });
-    if (migrated) store.set(DB_KEYS.PRODUCTS, prods);
-  }
+  // Products — always reset to seed data
+  store.set(DB_KEYS.PRODUCTS, INITIAL_PRODUCTS);
 
   // Users — always ensure Tamer exists; never allow deletion/demotion
   let users = store.get(DB_KEYS.USERS) || [];
